@@ -1,5 +1,15 @@
 # Snippet代码片
 
+[Battle7: 让人迷惑的this和this的改变](https://github.com/BETH-zhang/Snippet/issues/45)
+
+[Battle4: 如何深入的理解原型链](https://github.com/BETH-zhang/Snippet/issues/44)
+
+[Battle3: 如何实现一个精准的定时器](https://github.com/BETH-zhang/Snippet/issues/43)
+
+[Battle2：解释一下Js引擎的运行机制](https://github.com/BETH-zhang/Snippet/issues/42)
+
+[Battle1：解释一下For循环和While循环的优缺点和使用场景](https://github.com/BETH-zhang/Snippet/issues/41)
+
 [设计模式之原型模式](https://github.com/BETH-zhang/Snippet/issues/40)
 
 [设计模式之访问者模式](https://github.com/BETH-zhang/Snippet/issues/39)
