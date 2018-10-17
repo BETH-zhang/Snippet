@@ -1,5 +1,23 @@
 # Snippet代码片
 
+[设计模式之原型模式](https://github.com/BETH-zhang/Snippet/issues/40)
+
+[设计模式之访问者模式](https://github.com/BETH-zhang/Snippet/issues/39)
+
+[设计模式之抽象工厂模式](https://github.com/BETH-zhang/Snippet/issues/38)
+
+[设计模式之简单工厂模式](https://github.com/BETH-zhang/Snippet/issues/37)
+
+[设计模式之开闭原则实例](https://github.com/BETH-zhang/Snippet/issues/36)
+
+[模拟键盘的左右箭头键](https://github.com/BETH-zhang/Snippet/issues/35)
+
+[监听各种事件类型](https://github.com/BETH-zhang/Snippet/issues/34)
+
+[一个简单的文字转语言接口](https://github.com/BETH-zhang/Snippet/issues/33)
+
+[基于Jquery实现在屏幕上点击生成随机彩色文字提示](https://github.com/BETH-zhang/Snippet/issues/32)
+
 [实现一个正六边形布局](https://github.com/BETH-zhang/Snippet/issues/31)
 
 [实现一个心形的函数](https://github.com/BETH-zhang/Snippet/issues/30)
