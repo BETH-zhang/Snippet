@@ -1,5 +1,7 @@
 # Snippet代码片
 
+[模拟事件-自动触发](https://github.com/BETH-zhang/Snippet/issues/46)
+
 [Battle7: 让人迷惑的this和this的改变](https://github.com/BETH-zhang/Snippet/issues/45)
 
 [Battle4: 如何深入的理解原型链](https://github.com/BETH-zhang/Snippet/issues/44)
