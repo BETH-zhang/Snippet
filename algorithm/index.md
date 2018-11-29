@@ -26,3 +26,4 @@ smart
 
 字典在此：
 https://raw.githubusercontent.com/words/an-array-of-english-words/master/words.json
+

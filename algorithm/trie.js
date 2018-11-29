@@ -1,6 +1,7 @@
 // node trie.js --i=an
 const args = require('yargs').argv
 const word = args.i;
+const n = args.n;
 // const data = require('./small-words').default;
 const data = require('./all-words').default;
 
@@ -215,12 +216,29 @@ const main = (word) => {
   return ary
 }
 
+function arrSortMinToMax(a, b) {
+  if (a.length < b.length) {
+    return a - b;
+  } else if (a.length > b.length) {
+    return b - a;
+  } else {
+    for (var i = 0; i < a.length; i++) {
+      if (a[i].charCodeAt() !== b[i].charCodeAt()) {
+        return a[i].charCodeAt() - b[i].charCodeAt()
+      }
+    }
+    return 0
+  }
+}
+
 const logger = () => {
   console.log(`用户输入：${word}`)
   console.time('*************')
   let ary = main(word)
   ary.sort((a, b) => (a.len - b.len))
   ary = ary.map((item) => (item.value))
+  ary = ary.slice(0, n)
+  ary.sort(arrSortMinToMax)
   console.log(`打印结果：${ary}`)
   console.timeEnd('*************')
 }
