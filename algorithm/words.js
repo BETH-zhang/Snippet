@@ -24,31 +24,6 @@ function main(str) {
   return ary
 }
 
-// function arrMinNum(arr) {
-//   var minNum = Infinity,
-//     index = -1,
-//     minVul = "";
-//   for (var i = 0; i < arr.length; i++) {
-//     if (typeof (arr[i]) == "string") {
-//       if (arr[i].charCodeAt() < minNum) {
-//         minNum = arr[i].charCodeAt();
-//         minVul = arr[i];
-//         index = i;
-//       }
-//     } else {
-//       if (arr[i] < minNum) {
-//         minNum = arr[i];
-//         minVul = arr[i]
-//         index = i;
-//       }
-//     }
-//   };
-//   return {
-//     "minNum": minVul,
-//     "index": index
-//   };
-// }
-
 function arrSortMinToMax(a, b) {
   if (a.length < b.length) {
     return a - b;
