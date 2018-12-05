@@ -38,7 +38,7 @@ class DiamondPattern {
   }
 
   input(number) {
-    this.number = number
+    this.number = number > 0 && number < 10 ? number : 1
     this.getTotal()
     this.init()
     this.update(0, this.number, 1)
@@ -71,8 +71,10 @@ class DiamondPattern {
     this.data[x][y] = num 
     
     if (x === this.number && y === this.number) {
+      console.log(x, y, this.number, this.total)
       return null
     } else if (num >= this.total) {
+      console.log(x, y, this.number, this.total)
       return null
     }
 
@@ -101,12 +103,14 @@ class DiamondPattern {
     this.data.forEach((item) => {
       let str = ''
       item.forEach((subItem) => {
-        if (subItem && `${subItem}`.length === 2) {
-          str += `  ${subItem}`
-        } else if (subItem && `${subItem}`.length === 1) {
+        if (subItem && `${subItem}`.length === 3) {
           str += `   ${subItem}`
+        } else if (subItem && `${subItem}`.length === 2) {
+          str += `    ${subItem}`
+        } else if (subItem && `${subItem}`.length === 1) {
+          str += `     ${subItem}`
         } else {
-          str += '    '
+          str += '      '
         }
       })
       console.log(str)
