@@ -42,6 +42,7 @@ class DiamondPattern {
     this.getTotal()
     this.init()
     this.update(0, this.number, 1)
+    // this.whileUpdate()
     this.output()
   }
 
@@ -68,13 +69,13 @@ class DiamondPattern {
       return null
     }
 
-    this.data[x][y] = num 
+    this.data[x][y] = num
     
     if (x === this.number && y === this.number) {
-      console.log(x, y, this.number, this.total)
+      // console.log(x, y, this.number, this.total)
       return null
     } else if (num >= this.total) {
-      console.log(x, y, this.number, this.total)
+      // console.log(x, y, this.number, this.total)
       return null
     }
 
@@ -97,8 +98,56 @@ class DiamondPattern {
     }
   }
 
+  whileUpdate () {
+    let x = 0
+    let y = this.number
+    let num = 1
+    let noEnd = true
+
+    while (noEnd) {
+      if (this.data[x][y]) {
+        x = x = 1
+        y = y
+        num = num
+      } else {
+        this.data[x][y] = num
+
+        if ((x === this.number && y === this.number) || num >= this.total) {
+          noEnd = false
+          break
+        }
+        
+        // [0, 2] - [1, 3] 2 - 1 = 1 5 - 1 = 4
+        const rightBottom = (x >= 0 && x < this.number) && (y >= this.number && y < (this.row - 1))
+        // [2, 4] - [3, 3]
+        const leftBottom = (x >= this.number && x < (this.row - 1)) && (y <= (this.row - 1) && y > this.number)
+        // [4, 2] - [3, 1]
+        const leftTop = (x <= (this.row - 1) && x > this.number) && (y <= this.number && y > 0)
+        // [2, 0] - [1, 1]
+        const rightTop = (x <= this.number && x > 0) && (y >= 0 && y < this.number)
+        if (rightBottom) {
+          x = x + 1
+          y = y + 1
+          num = num + 1
+        } else if (leftBottom) {
+          x = x + 1
+          y = y - 1
+          num = num + 1
+        } else if (leftTop) {
+          x = x - 1
+          y = y - 1
+          num = num + 1
+        } else if (rightTop) {
+          x = x - 1
+          y = y + 1
+          num = num + 1
+        }
+      }
+    }
+  }
+
   output() {
-    const star = Array(this.number * 10).fill('*')
+    const star = Array(this.number * 15).fill('*')
     console.log(`${star.join('')}`)
     this.data.forEach((item) => {
       let str = ''
