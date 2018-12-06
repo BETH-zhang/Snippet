@@ -1,5 +1,11 @@
 # Snippet代码片
 
+[Battle算法之递归算法](https://github.com/BETH-zhang/Snippet/issues/49)
+
+[Battle算法之穷举法](https://github.com/BETH-zhang/Snippet/issues/48)
+
+[Battle算法之创建字典树](https://github.com/BETH-zhang/Snippet/issues/47)
+
 [模拟事件-自动触发](https://github.com/BETH-zhang/Snippet/issues/46)
 
 [Battle7: 让人迷惑的this和this的改变](https://github.com/BETH-zhang/Snippet/issues/45)
