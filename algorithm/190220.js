@@ -118,11 +118,14 @@ class Demo {
     let afterMin = 0;
     let level = 1; // 1 个位 10 十位  100 百位
     if (min > max) {
+      alert('非法输入')
     } else if (min === 0 && max === 0 && key === 0) {
       count = 1;
     } else {
-      let num = 1000
-      while (level < num) {
+      // let num = 1000
+      const len = max.toString().length
+      while (level <= len ** 10) {
+      // while (max / level != 0) {
         // console.log(max / level, max / level !== 0)
         if (key === 0 && max / (level * 10) === 0) {
           break;
@@ -136,7 +139,7 @@ class Demo {
         afterMin = min - Math.floor(min / level) * level; // 计算当前为最小值低位
 
         // console.log('******************* ----- start -----')
-        
+
         // console.log(`当前位数字：${currentMin} --- ${currentMax}`, currentMax - currentMin)
         // console.log(`当前位高位：${beforeMin} --- ${beforeMax}`, beforeMax - beforeMin)
         // console.log(`当前位低位：${afterMin} --- ${afterMax}`, afterMax - afterMin)
@@ -165,10 +168,6 @@ class Demo {
       }
     }
 
-    if (s % 10 === k) {
-      count += 1
-    }
-
     return count
   }
 
@@ -182,28 +181,24 @@ class Demo {
 
 console.time('----------')
 const demo = new Demo()
-demo.initTest(s, b, k)
-const best = demo.init(s, b, k)
+// demo.initTest(s, b, k)
+const best = demo.init(s - 1, b, k)
 
 console.log(`0、${k} 出现的次数：`, best)
 
-const getValue = demo.getValue()
-console.log(`1、${k} 出现的次数：`, getValue.count)
-if (getValue.length < 50) {
-  console.log(`1.${k} 出现的数字：`, getValue.ary)
-}
+// const getValue = demo.getValue()
+// console.log(`1、${k} 出现的次数：`, getValue.count)
+// if (getValue.length < 50) {
+//   console.log(`1.${k} 出现的数字：`, getValue.ary)
+// }
 
-const delVal = demo.countDigitOne(s, k)
-const allVal = demo.countDigitOne(b, k)
-let v = 0
-if (s % 10 === k) {
-  v = 1
-}
-console.log(`2、${k} 出现的次数是：${allVal} - ${delVal} = `, allVal - delVal + v)
+// const delVal = demo.countDigitOne(s - 1, k)
+// const allVal = demo.countDigitOne(b, k)
+// console.log(`2、${k} 出现的次数是：${allVal} - ${delVal} = `, allVal - delVal)
 
-const val = demo.digitCounts(s, k)
-const val1 = demo.digitCounts(b, k)
-console.log(`3、${k} 出现的次数是：${val1} - ${val} = `, val1 - val + v)
+// const val = demo.digitCounts(s - 1, k)
+// const val1 = demo.digitCounts(b, k)
+// console.log(`3、${k} 出现的次数是：${val1} - ${val} = `, val1 - val)
 
 console.timeEnd('----------')
 
